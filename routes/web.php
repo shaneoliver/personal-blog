@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(
+    ['register' => false]
+);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/about', 'AboutController')->name('about.index');
+Route::get('/projects', 'ProjectController@index')->name('projects.index');
+Route::get('/articles', 'ArticleController@index')->name('articles.index');
+Route::get('/contact', 'ContactController@index')->name('contact.index');
+Route::post('/contact', 'ContactController@store')->name('contact.store');

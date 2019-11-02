@@ -1,4 +1,4 @@
-@extends('layouts.no-nav')
+@extends('layouts.app')
 
 @section('content')
 <div class="home-cover">
