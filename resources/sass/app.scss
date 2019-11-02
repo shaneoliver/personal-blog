@@ -1,1 +1,46 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+::selection {
+    background-color: rgba($primary, .2);
+    color: $primary;
+}
+
+.home-cover {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+    }
+
+    &-avatar {
+        width: 80vw;
+        max-width: 180px;
+        @include media-breakpoint-up(md) {
+            width: 20%;
+            max-width: 400px;
+        }
+    }
+
+    &-content {
+        padding-top: 2rem;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            padding-top: 0;
+            padding-left: 2rem;
+            text-align: left;
+        }
+    }
+}
