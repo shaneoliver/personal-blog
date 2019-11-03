@@ -14,6 +14,15 @@ class Article extends Model
     protected $guarded = [];
 
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'published_at',
+    ];
+
+    /**
      * Get the user that owns the article.
      */
     public function user()

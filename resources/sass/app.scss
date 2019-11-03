@@ -60,3 +60,12 @@
         }
     }
 }
+
+.editor__content {
+    @extend .form-control;
+    height: auto;
+}
+
+.ProseMirror-focused {
+    outline: none;
+}
