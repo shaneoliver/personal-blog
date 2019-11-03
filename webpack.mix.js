@@ -14,3 +14,4 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .browserSync('shaneoliver_com_au.test')
+   .extract(['vue', 'bootstrap', 'tiptap'])
