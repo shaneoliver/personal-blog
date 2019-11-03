@@ -27,9 +27,8 @@ Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 Route::get('/articles', 'ArticleController@index')->name('articles.index');
-
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/articles/create', 'ArticleController@create')->name('articles.create');
     Route::post('/articles', 'ArticleController@store')->name('articles.store');
-    Route::get('/articles/{article}', 'ArticleController@show')->name('articles.show');
 });
+Route::get('/articles/{article}', 'ArticleController@show')->name('articles.show');
