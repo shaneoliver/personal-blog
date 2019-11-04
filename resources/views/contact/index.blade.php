@@ -3,7 +3,7 @@
 @section('content')
 <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="col-12 col-md-10 col-lg-8">
             <h1>Get in touch</h1>
             
             @if (session()->has('success'))
